@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class EmailService {
 
-  private baseUrl = "http://localhost:8080/api/email" ;
+   private baseUrl = "https://ai-auto-email-reply-generator.onrender.com/api/email";
 
 
   constructor(private http : HttpClient){}
