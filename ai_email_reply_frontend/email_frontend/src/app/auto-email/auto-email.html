@@ -1,0 +1,40 @@
+<div class="bg-dark bg-gradient text-white min-vh-100 p-4">
+
+    <h1>Auto Generated Email Reply</h1>
+
+    <div class="mt-4 ">
+        <p>Original email content</p>
+
+        <textarea
+            class="form-control"
+            rows="8"
+            placeholder="Enter your email content"
+            [(ngModel)]="content">
+        </textarea>
+    </div>
+
+    <div class="mt-4">
+        <select class="form-select">
+            <option value="">Select Tone</option>
+            <option value="professional">Professional</option>
+            <option value="friendly">Friendly</option>
+            <option value="casual">Casual</option>
+            <option value="formal">Formal</option>
+        </select>
+    </div>
+
+    <div class="mt-4">
+        <button class="btn btn-primary" (click)="generateReply(content)">
+            Generate Reply
+        </button>
+        <p class="mt-4">Generated Email</p>
+
+        <textarea
+            class="form-control"
+            rows="8"
+            placeholder="Ai generated Reply"
+            [value] = "ans">
+        </textarea>
+    </div>
+
+</div>

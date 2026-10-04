@@ -1,0 +1,31 @@
+{
+  "name": "Auto Email Extension",
+  "description": "AI-powered Email reply",
+  "version": "1.0",
+  "manifest_version": 3,
+  "host_permissions": [
+    "http://localhost:8080/*",
+    "*://mail.google.com/*"
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "js": [ "content.js" ],
+      "matches": [ "*://mail.google.com/*" ],
+      "css" : [ "content.css" ],
+      "run_at" :  "document_end" 
+    }
+  ],
+
+     "web_accessible_resources": [
+    {
+      "resources": [ "/icons/*" ],
+      "matches": [ "*://mail.google.com/*" ]
+    }
+  ],
+  "action": {
+    "default_popup": "content.html"
+  }
+}
