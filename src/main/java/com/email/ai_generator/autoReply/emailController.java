@@ -8,10 +8,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/email")
 @RequiredArgsConstructor
 //@CrossOrigin(origins = "https://mail.google.com")
-@CrossOrigin(
-        origins = "${FRONTEND_URL}",
-        methods = {RequestMethod.POST, RequestMethod.OPTIONS}
-)
 public class emailController {
 
      private final EmailService emailService ;
